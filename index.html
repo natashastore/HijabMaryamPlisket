@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hijab Maryam Plisket - Premium Jersey Hijab</title>
+    <title>Hijab Maryam Plisket - Jilbab Premium Elegan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGzwycJ7fC6DYVo_eUzS_tHR3q25pFffNmMg&s">
@@ -15,55 +15,45 @@
             background-color: #f8fafc;
         }
         
-        .promo-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .premium-blue {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        
+        .promo-timer {
+            background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
             animation: pulse 2s infinite;
         }
         
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        .product-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
         
-        .countdown-box {
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            color: white;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .countdown-item {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            padding: 8px;
-            min-width: 60px;
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
         
         .testimonial-card {
-            background: white;
-            border-radius: 10px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
         }
         
-        .testimonial-card:hover {
-            transform: translateY(-5px);
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
         }
         
         .color-variant {
             border: 2px solid transparent;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
         
         .color-variant:hover {
@@ -73,247 +63,214 @@
         
         .color-variant.active {
             border-color: #3b82f6;
-            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
-        }
-        
-        .price-badge {
-            background: linear-gradient(135deg, #ef4444, #dc2626);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-        
-        .feature-icon {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        .form-container {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
         }
     </style>
 </head>
-<body class="text-gray-800">
-    <!-- Header Section -->
-    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-4 px-6 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <i class="fas fa-crown text-yellow-300 text-2xl mr-2"></i>
-                <h1 class="text-xl font-bold">NatashaStore</h1>
+<body>
+    <!-- Header -->
+    <header class="premium-blue text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    <span class="text-white">Natasha</span><span class="text-blue-200">Store</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#product" class="text-white hover:text-blue-200 transition">Produk</a>
+                    <a href="#features" class="text-white hover:text-blue-200 transition">Keunggulan</a>
+                    <a href="#testimonials" class="text-white hover:text-blue-200 transition">Testimoni</a>
+                    <a href="#order" class="text-white hover:text-blue-200 transition">Pesan Sekarang</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
-            <div class="hidden md:flex space-x-4">
-            </div>
-            <button class="md:hidden text-xl">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
     <!-- Main Product Image -->
-    <section class="relative">
-        <img src="https://down-id.img.susercontent.com/file/82e8f956a2b09dae3e0b478be4fb7ea7.webp" alt="Hijab Maryam Plisket" class="w-full">
-        <div class="promo-badge">
-            <i class="fas fa-bolt mr-1"></i> PROMO HARI INI
+    <section class="py-0">
+        <div class="container mx-auto px-4">
+            <img src="https://down-id.img.susercontent.com/file/82e8f956a2b09dae3e0b478be4fb7ea7.webp" alt="Hijab Maryam Plisket" class="w-full h-auto rounded-lg shadow-lg">
         </div>
     </section>
 
     <!-- Product Title & Description -->
-    <section class="container mx-auto px-4 py-8">
-        <div class="text-center">
-            <h1 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Hijab Maryam Plisket</h1>
-            <p class="text-lg text-gray-600 mb-6">Jilbab Bergo Plisket Berbahan Jersey Super Premium Tampilan Semakin Elegan</p>
-            
-            <div class="flex justify-center space-x-2 mb-8">
-                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"><i class="fas fa-check-circle mr-1"></i> Premium Quality</span>
-                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"><i class="fas fa-check-circle mr-1"></i> Bahan Tebal</span>
-                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"><i class="fas fa-check-circle mr-1"></i> Elegan</span>
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Hijab Maryam Plisket</h1>
+                <p class="text-lg text-gray-600 mb-6">Jilbab Bergo Plisket Berbahan Jersey Super Premium Tampilan Semakin Elegan</p>
+                <div class="flex justify-center space-x-4">
+                    <div class="flex items-center text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="ml-2 text-gray-700">4.8 (1.245 ulasan)</span>
+                    </div>
+                    <div class="flex items-center text-blue-500">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="ml-2 text-gray-700">1.452+ Terjual</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Product Features -->
-    <section class="bg-blue-50 py-12">
+    <section id="features" class="py-12 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center text-blue-800 mb-8">Keunggulan Produk</h2>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
-                    <div class="feature-icon">
-                        <i class="fas fa-tshirt text-xl"></i>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Keunggulan Produk</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="product-card bg-white p-6 rounded-lg">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-tshirt"></i>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg mb-2">Bahan Premium</h3>
-                        <p class="text-gray-600">Jersey Premium Super Tebal, Lembut & Tidak Nerawang</p>
-                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Bahan Premium</h3>
+                    <p class="text-gray-600">Bahan Jersey Premium Super Tebal, Lembut & Tidak Nerawang</p>
                 </div>
-                
-                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined text-xl"></i>
+                <div class="product-card bg-white p-6 rounded-lg">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-ruler-combined"></i>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg mb-2">Ukuran Ideal</h3>
-                        <p class="text-gray-600">Depan +- 75cm, Belakang +- 85cm. Nyaman dipakai sehari-hari</p>
-                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Ukuran Ideal</h3>
+                    <p class="text-gray-600">Ukuran Ideal Depan +- 75cm, Belakang +- 85cm. Nyaman dipakai sehari-hari</p>
                 </div>
-                
-                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
-                    <div class="feature-icon">
-                        <i class="fas fa-star text-xl"></i>
+                <div class="product-card bg-white p-6 rounded-lg">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-crown"></i>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg mb-2">Tampilan Elegan</h3>
-                        <p class="text-gray-600">Desain modis yang membuat penampilan semakin anggun</p>
-                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Tampilan Elegan</h3>
+                    <p class="text-gray-600">Desain modis yang membuat penampilan semakin anggun</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Details Gallery -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-2xl font-bold text-center text-blue-800 mb-8">Detail Produk</h2>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="text-center">
-                <img src="https://down-id.img.susercontent.com/file/sg-11134201-22100-9iyj6j5yhmiv2b.webp" alt="Detail Hijab 1" class="w-full rounded-lg shadow-md mb-4">
-                <p class="text-gray-600">Desain plisket premium yang tidak mudah kusut</p>
-            </div>
-            
-            <div class="text-center">
-                <img src="https://down-id.img.susercontent.com/file/37b03e792194123bad6ad5932ba939ef.webp" alt="Detail Hijab 2" class="w-full rounded-lg shadow-md mb-4">
-                <p class="text-gray-600">Jahitan rapi dan kuat untuk ketahanan maksimal</p>
-            </div>
-            
-            <div class="text-center">
-                <img src="https://down-id.img.susercontent.com/file/28c9b0e5b9d9b675d7362ac8f922fec0.webp" alt="Detail Hijab 3" class="w-full rounded-lg shadow-md mb-4">
-                <p class="text-gray-600">Bahan jersey premium yang lembut dan nyaman</p>
+    <!-- Product Details -->
+    <section id="product" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Detail Produk</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-22100-9iyj6j5yhmiv2b.webp" alt="Detail Hijab Maryam" class="w-full h-auto rounded-lg mb-4">
+                    <p class="text-gray-600">Desain plisket premium dengan jahitan rapi</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://down-id.img.susercontent.com/file/37b03e792194123bad6ad5932ba939ef.webp" alt="Detail Hijab Maryam" class="w-full h-auto rounded-lg mb-4">
+                    <p class="text-gray-600">Bahan jersey super tebal dan tidak nerawang</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://down-id.img.susercontent.com/file/28c9b0e5b9d9b675d7362ac8f922fec0.webp" alt="Detail Hijab Maryam" class="w-full h-auto rounded-lg mb-4">
+                    <p class="text-gray-600">Nyaman dipakai untuk aktivitas sehari-hari</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Color Variants -->
-    <section class="bg-blue-50 py-12">
+    <section class="py-12 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center text-blue-800 mb-8">Pilihan Warna</h2>
-            
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Varian Warna</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-                <div class="color-variant active">
-                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reou-m8h6msvnloknda@resize_w450_nl.webp" alt="Warna 1" class="w-full rounded">
+                <div class="color-variant rounded-lg overflow-hidden">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reou-m8h6msvnloknda@resize_w450_nl.webp" alt="Warna Hijab Maryam" class="w-full h-auto">
                 </div>
-                
-                <div class="color-variant">
-                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reoc-m8h6mui780ifbf@resize_w450_nl.webp" alt="Warna 2" class="w-full rounded">
+                <div class="color-variant rounded-lg overflow-hidden">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reoc-m8h6mui780ifbf@resize_w450_nl.webp" alt="Warna Hijab Maryam" class="w-full h-auto">
                 </div>
-                
-                <div class="color-variant">
-                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7ren7-m8h6muoaz4iq60@resize_w450_nl.webp" alt="Warna 3" class="w-full rounded">
+                <div class="color-variant rounded-lg overflow-hidden">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7ren7-m8h6muoaz4iq60@resize_w450_nl.webp" alt="Warna Hijab Maryam" class="w-full h-auto">
                 </div>
-                
-                <div class="color-variant">
-                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reqm-m8h6mvfruvpx42.webp" alt="Warna 4" class="w-full rounded">
+                <div class="color-variant rounded-lg overflow-hidden">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reqm-m8h6mvfruvpx42.webp" alt="Warna Hijab Maryam" class="w-full h-auto">
                 </div>
-                
-                <div class="color-variant">
-                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reoh-m8h6mvmfl5x29a.webp" alt="Warna 5" class="w-full rounded">
+                <div class="color-variant rounded-lg overflow-hidden">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reoh-m8h6mvmfl5x29a.webp" alt="Warna Hijab Maryam" class="w-full h-auto">
                 </div>
-                
-                <div class="color-variant">
-                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reop-m8h6mtxo23s2a3.webp" alt="Warna 6" class="w-full rounded">
+                <div class="color-variant rounded-lg overflow-hidden">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7reop-m8h6mtxo23s2a3.webp" alt="Warna Hijab Maryam" class="w-full h-auto">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-2xl font-bold text-center text-blue-800 mb-8">Apa Kata Pelanggan Kami?</h2>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="testimonial-card p-6">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 font-bold mr-3">AS</div>
-                    <div>
-                        <h4 class="font-bold">Anisa Sari</h4>
-                        <div class="flex text-yellow-400 text-sm">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+    <section id="testimonials" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Apa Kata Pelanggan Kami?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 font-bold">A</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Anisa Rahma</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
+                    <p class="text-gray-600">"Bahan hijabnya sangat premium, tebal tapi tetap adem. Plisketnya rapi banget dan jatuhnya elegan. Sudah beli 3 warna berbeda dan semuanya berkualitas sama bagusnya!"</p>
                 </div>
-                <p class="text-gray-600 italic">"Bahan hijabnya sangat premium, tebal tapi tetap adem. Plisketnya juga rapi banget, ga mudah kusut meskipun dipakai seharian. Worth it banget untuk harga segini!"</p>
-            </div>
-            
-            <div class="testimonial-card p-6">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 font-bold mr-3">DR</div>
-                    <div>
-                        <h4 class="font-bold">Dinda Rahma</h4>
-                        <div class="flex text-yellow-400 text-sm">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 font-bold">D</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Dina Safitri</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
                         </div>
                     </div>
+                    <p class="text-gray-600">"Pengiriman cepat dan packing rapi. Hijabnya benar-benar tidak nerawang seperti di deskripsi. Ukurannya pas banget, tidak terlalu panjang atau pendek. Cocok untuk daily wear!"</p>
                 </div>
-                <p class="text-gray-600 italic">"Udah beli 3 warna berbeda karena suka banget sama bahannya. Nyaman dipakai dan jatuhnya bagus. Packagingnya juga rapi, pengiriman cepat. Recommended banget!"</p>
-            </div>
-            
-            <div class="testimonial-card p-6">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 font-bold mr-3">SM</div>
-                    <div>
-                        <h4 class="font-bold">Siti Maulida</h4>
-                        <div class="flex text-yellow-400 text-sm">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                <div class="testimonial-card p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 font-bold">S</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Siti Aminah</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
+                    <p class="text-gray-600">"Warnanya persis seperti di foto, tidak melar setelah beberapa kali dicuci. Yang paling suka adalah bahannya yang lembut dan tidak gatal di kulit. Sudah rekomendasikan ke teman-teman kantor!"</p>
                 </div>
-                <p class="text-gray-600 italic">"Pertama kali pakai langsung jatuh cinta. Bahan tebal tapi ga panas, plisketnya rapi dan ga mudah lepas. Warna persis seperti di foto. Puas banget sama produknya!"</p>
             </div>
         </div>
     </section>
 
-    <!-- Promo Countdown -->
-    <section class="bg-gradient-to-r from-blue-800 to-blue-600 py-8">
+    <!-- Promo Timer -->
+    <section class="py-8">
         <div class="container mx-auto px-4">
-            <div class="text-center text-white mb-6">
-                <h2 class="text-2xl font-bold mb-2">PROMO SPESIAL HARI INI</h2>
-                <p class="text-blue-100">Dapatkan Diskon Spesial Untuk Hari Ini Saja, Harga Akan Kembali Normal Setelah:</p>
-            </div>
-            
-            <div class="countdown-box max-w-md mx-auto">
-                <div class="flex justify-center space-x-4 text-center">
-                    <div class="countdown-item">
-                        <div class="text-2xl font-bold" id="countdown-hours">12</div>
+            <div class="promo-timer text-white rounded-lg p-6 text-center">
+                <h3 class="text-xl font-bold mb-2">PROMO SPESIAL HARI INI!</h3>
+                <p class="mb-4">Diskon akan berakhir dalam:</p>
+                <div class="flex justify-center space-x-4">
+                    <div class="bg-white text-red-500 rounded-lg p-2 w-16">
+                        <div class="text-2xl font-bold" id="hours">12</div>
                         <div class="text-xs">Jam</div>
                     </div>
-                    <div class="countdown-item">
-                        <div class="text-2xl font-bold" id="countdown-minutes">45</div>
+                    <div class="bg-white text-red-500 rounded-lg p-2 w-16">
+                        <div class="text-2xl font-bold" id="minutes">45</div>
                         <div class="text-xs">Menit</div>
                     </div>
-                    <div class="countdown-item">
-                        <div class="text-2xl font-bold" id="countdown-seconds">30</div>
+                    <div class="bg-white text-red-500 rounded-lg p-2 w-16">
+                        <div class="text-2xl font-bold" id="seconds">30</div>
                         <div class="text-xs">Detik</div>
                     </div>
                 </div>
@@ -322,204 +279,189 @@
     </section>
 
     <!-- Order Notes -->
-    <section class="container mx-auto px-4 py-8">
-        <div class="bg-blue-50 rounded-lg p-6">
-            <h3 class="font-bold text-blue-800 mb-4 text-center"><i class="fas fa-info-circle mr-2"></i> Catatan Penting</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li class="flex items-start">
-                    <i class="fas fa-truck text-blue-600 mt-1 mr-2"></i>
-                    <span>Pengiriman 2 - 4 Hari Setelah Pemesanan</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-2"></i>
-                    <span>Mohon Isi Alamat Dengan Lengkap</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                    <span>100% Product Original</span>
-                </li>
-            </ul>
+    <section class="py-8 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Catatan Penting:</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <i class="fas fa-truck text-blue-500 mt-1 mr-2"></i>
+                        <span>Pengiriman 2 - 4 Hari Setelah Pemesanan</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-2"></i>
+                        <span>Mohon Isi Alamat Dengan Lengkap</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-certificate text-blue-500 mt-1 mr-2"></i>
+                        <span>100% Product Original</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="container mx-auto px-4 py-8">
-        <div class="bg-white rounded-xl shadow-lg p-6 max-w-2xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="mb-4 md:mb-0">
-                    <div class="price-badge inline-block mb-2">
-                        <i class="fas fa-tag mr-1"></i> PROMO SPESIAL
+    <!-- Price & Order Section -->
+    <section id="order" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <!-- Promo Banner -->
+                <div class="mb-8 rounded-lg overflow-hidden">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7repz-m8h6mrzgwtrd37.webp" alt="Promo Diskon" class="w-full h-auto">
+                </div>
+                
+                <!-- Price -->
+                <div class="bg-blue-50 rounded-lg p-6 mb-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-red-500 font-bold">PROMO SPESIAL HARI INI</span>
+                            <p class="text-gray-600 text-sm">Dapatkan Diskon Spesial Untuk Hari Ini Saja, Harga Akan Kembali Normal Setelah:</p>
+                        </div>
                     </div>
                     <div class="flex items-end">
-                        <span class="text-4xl font-bold text-blue-800">Rp145.000</span>
-                        <span class="text-lg text-gray-500 line-through ml-2">Rp199.000</span>
+                        <div class="mr-4">
+                            <span class="text-gray-500 line-through text-lg">Rp 149.000</span>
+                            <div class="text-3xl font-bold text-blue-600">Rp 109.000</div>
+                        </div>
+                        <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                            Hemat Rp 40.000
+                        </div>
                     </div>
-                    <p class="text-green-600 font-medium mt-1">
-                        <i class="fas fa-wallet mr-1"></i> Anda Hemat Rp54.000 (27%)
-                    </p>
                 </div>
-                <div class="text-center">
-                    <p class="text-sm text-gray-500 mb-1">Stok Tersisa:</p>
-                    <div class="w-full bg-gray-200 rounded-full h-2.5">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 30%"></div>
+                
+                <!-- Order Form -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-center text-gray-800 mb-6">Form Pemesanan</h3>
+                    
+                    <!-- OrderOnline Embed Code -->
+                    <div class="ooef">
+                        <form class="orderonline-embed-form" data-username="emma" data-product-slug="hijab-maryam-plisket" data-product-id="6862d47b60941f294907ad20" id="oo-embed-form-hijab-maryam-plisket-8055" data-origin="orderonline">
+                            <div class="ooef-loader">
+                                <style>
+                                    .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                                    @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                    @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                    .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                                    .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                                    .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                                    @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                    @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                </style>
+                                <div aria-live="polite" role="status">
+                                    <div>Loading...</div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <p class="text-sm text-gray-600 mt-1">Hanya 98 pcs lagi!</p>
+                    <script>
+                        if (typeof xLogError != 'function') {
+                            var xLogError = function (error) {
+                                var req = new XMLHttpRequest();
+                                var payload = JSON.stringify({
+                                    url: document.location.href,
+                                    line: error.line,
+                                    stack: error.stack
+                                });
+                                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                                req.open('POST', 'https://api.orderonline.id/log', true);
+                                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                req.send(params);
+                            };
+                        }
+                        try {
+                            if (typeof xEmbedScript != 'function') {
+                                var xEmbedScript = function () {
+                                    !function(w, d, e, v, id, t, s) {
+                                        if (d.getElementById(id)) return;
+                                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                        s = d.getElementsByTagName(e)[0];
+                                        s.parentNode.insertBefore(t, s);
+                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                                };
+                            }
+                            if (typeof xEmbedInit != 'function') {
+                                var xEmbedInit = function (w, n) {
+                                    if (w.ooe) return;
+                                    n = w.ooe = function() {
+                                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                    };
+                                    if (!w._ooe) w._ooe = n;
+                                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                                };
+                            }
+                            xEmbedInit(window);
+                            ooe('setup', 'redirect', 'https://emma.orderonline.id');
+                            ooe('init', '5f16831a9d8e8e4fb67472e5', '6862d47b60941f294907ad20', '6862d47b60941f294907ad21', 'oo-embed-form-hijab-maryam-plisket-8055', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false});
+                            if (!window.jQuery) {
+                                !function(w, d, e, v, id, t, s) {
+                                    if (d.getElementById(id)) return;
+                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                    t.addEventListener('load', xEmbedScript);
+                                    s = d.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                            } else {
+                                xEmbedScript();
+                            }
+                        } catch (e) {
+                            xLogError(e);
+                            throw e;
+                        }
+                    </script>
+                    <!-- End OrderOnline Embed Code -->
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Promo Banner -->
-    <section class="container mx-auto px-4 py-4">
-        <img src="https://down-id.img.susercontent.com/file/sg-11134201-7repz-m8h6mrzgwtrd37.webp" alt="Promo Banner" class="w-full rounded-lg shadow-md">
-    </section>
-
-    <!-- Order Form -->
-    <section class="container mx-auto px-4 py-8">
-        <div class="form-container p-6 max-w-2xl mx-auto">
-            <h2 class="text-2xl font-bold text-center text-blue-800 mb-6">
-                <i class="fas fa-shopping-cart mr-2"></i> Form Pemesanan
-            </h2>
-            
-            <!-- OrderOnline Embed Code -->
-            <div class="ooef">
-                <form class="orderonline-embed-form" data-username="emma" data-product-slug="hijab-maryam-plisket" data-product-id="6862d47b60941f294907ad20" id="oo-embed-form-hijab-maryam-plisket-4043" data-origin="orderonline">
-                    <div class="ooef-loader">
-                        <style>
-                            .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
-                            @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
-                            @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
-                            .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
-                            .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
-                            .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
-                            @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
-                            @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
-                        </style>
-                        <div aria-live="polite" role="status"><div>Loading...</div></div>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="mt-6 text-center text-sm text-gray-500">
-                <i class="fas fa-lock mr-1"></i> Pembayaran aman melalui sistem kami
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-8">
+    <footer class="premium-blue text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="text-center">
-                <h3 class="text-xl font-bold mb-4">NatashaStore</h3>
-                <p class="mb-4">Produk hijab berkualitas premium dengan bahan terbaik untuk penampilan yang lebih elegan</p>
-                
-                <div class="flex justify-center space-x-4 mb-6">
-                    <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-blue-700 transition">
-                        <i class="fab fa-whatsapp"></i>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold mb-2">
+                        <span class="text-white">Natasha</span><span class="text-blue-200">Store</span>
+                    </div>
+                    <p class="text-blue-100">Fashion Premium Berkualitas Tinggi</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fab fa-instagram text-2xl"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-blue-700 transition">
-                        <i class="fab fa-instagram"></i>
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fab fa-whatsapp text-2xl"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-blue-700 transition">
-                        <i class="fab fa-facebook-f"></i>
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fab fa-facebook text-2xl"></i>
                     </a>
                 </div>
-                
-                <p class="text-sm text-blue-200">© 2023 NatashaStore. All Rights Reserved.</p>
+            </div>
+            <div class="border-t border-blue-400 mt-6 pt-6 text-center text-blue-100">
+                <p>&copy; 2023 NatashaStore. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Promo Timer Script -->
     <script>
-        // Countdown Timer
-        function updateCountdown() {
+        function updateTimer() {
             const now = new Date();
-            const midnight = new Date();
-            midnight.setHours(24, 0, 0, 0);
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 0);
             
-            const diff = midnight - now;
+            const diff = endOfDay - now;
             
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
             
-            document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
         }
         
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-        
-        // Color Variant Selection
-        const colorVariants = document.querySelectorAll('.color-variant');
-        colorVariants.forEach(variant => {
-            variant.addEventListener('click', () => {
-                colorVariants.forEach(v => v.classList.remove('active'));
-                variant.classList.add('active');
-            });
-        });
-        
-        // OrderOnline Embed Script
-        if (typeof xLogError != 'function') {
-            var xLogError = function (error) {
-                var req = new XMLHttpRequest();
-                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
-                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
-                req.open('POST', 'https://api.orderonline.id/log', true);
-                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                req.send(params);
-            };
-        }
-        
-        try {
-            if (typeof xEmbedScript != 'function') {
-                var xEmbedScript = function () {
-                    !function(w, d, e, v, id, t, s) {
-                        if (d.getElementById(id)) return;
-                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
-                        s = d.getElementsByTagName(e)[0];
-                        s.parentNode.insertBefore(t, s);
-                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
-                };
-            }
-            
-            if (typeof xEmbedInit != 'function') {
-                var xEmbedInit = function (w, n) {
-                    if (w.ooe) return;
-                    n = w.ooe = function() {
-                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                    };
-                    if (!w._ooe) w._ooe = n;
-                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
-                };
-            }
-            
-            xEmbedInit(window);
-            ooe('setup', 'redirect', 'https://emma.orderonline.id');
-            ooe('init', '5f16831a9d8e8e4fb67472e5', '6862d47b60941f294907ad20', '6862d47b60941f294907ad21', 'oo-embed-form-hijab-maryam-plisket-4043', {
-                "mode":"page",
-                "action":"Klik untuk pemesanan",
-                "title":"Form Pemesanan",
-                "triggerPixel":false,
-                "triggerGtm":false
-            });
-            
-            if (!window.jQuery) {
-                !function(w, d, e, v, id, t, s) {
-                    if (d.getElementById(id)) return;
-                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
-                    t.addEventListener('load', xEmbedScript);
-                    s = d.getElementsByTagName(e)[0];
-                    s.parentNode.insertBefore(t, s);
-                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
-            } else {
-                xEmbedScript();
-            }
-        } catch (e) {
-            xLogError(e);
-            throw e;
-        }
+        updateTimer();
+        setInterval(updateTimer, 1000);
     </script>
 </body>
 </html>
